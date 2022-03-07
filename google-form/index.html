@@ -70,24 +70,7 @@
               id="dateInput"
               pattern="/\d{4}-\d{2}-\d{2}/"
               value=""
-            />
-            <input
-              type="hidden"
-              id="dateInputYear"
-              name="entry.1471022222_year"
-              value=""
-            />
-            <input
-              type="hidden"
-              id="dateInputMonth"
-              name="entry.1471022222_month"
-              value=""
-            />
-            <input
-              type="hidden"
-              id="dateInputDay"
-              name="entry.1471022222_day"
-              value=""
+              name="entry.1471022222"
             />
           </div>
 
@@ -122,7 +105,7 @@
               type="checkbox"
               class="form-check-input checkSelect"
               id="childSeat"
-              name=""
+              name="entry.1550946336"
               value="需要兒童座椅"
             />
             <label class="form-check-label fw-bold" for="childSeat"
@@ -134,7 +117,7 @@
               type="checkbox"
               class="form-check-input checkSelect"
               id="vegetarian"
-              name=""
+              name="entry.1550946336"
               value="素食餐點"
             />
             <label class="form-check-label fw-bold" for="vegetarian"
@@ -146,7 +129,7 @@
               type="checkbox"
               class="form-check-input checkSelect"
               id="smoking"
-              name=""
+              name="entry.1550946336"
               value="吸菸區"
             />
             <label class="form-check-label fw-bold" for="smoking">吸菸區</label>
@@ -167,35 +150,6 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-    <script>
-      const inputDate = document.getElementById('dateInput')
-      const dateInputYear = document.getElementById('dateInputYear')
-      const dateInputMonth = document.getElementById('dateInputMonth')
-      const dateInputDay = document.getElementById('dateInputDay')
-      const checkSelect = document.querySelectorAll('.checkSelect')
-
-      const inputDateFn = () => {
-        const splitstring = inputDate.value.split('-')
-        const [year, month, day] = splitstring
-        dateInputYear.value = year
-        dateInputMonth.value = month
-        dateInputDay.value = day
-        console.log('do')
-      }
-      inputDate.addEventListener('change', inputDateFn)
-
-      checkSelect.forEach((sel) => {
-        const id = 'entry.1550946336'
-        sel.addEventListener('click', () => {
-          const item = sel
-          if (item.checked) {
-            item.name = id
-          } else {
-            item.name = ''
-          }
-        })
-      })
-      inputDateFn()
-    </script>
+    <script></script>
   </body>
 </html>
