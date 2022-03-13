@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="no-referrer">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .grid {
+      background: #EEE;
+      max-width: 1200px;
+    }
+
+    .grid-item {
+      width: 390px;
+      margin-bottom: 5px;
+    }
+
+    .grid.is-visible-items .grid-item {
+      visibility: visible;
+    }
+
+    .w100 {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="grid">
+      <div class="grid-item">
+        <img class="w100" src="./img/OkKwWM9.jpeg"   alt="5">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/kgTEVHZ.jpeg" alt="3" >
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/vZoqs0P.jpeg" alt="10">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/LNUXzZF.jpeg" alt="4">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/ArsdCGv.jpeg" alt="1">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/eUppgFB.jpeg" alt="2">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/s6w2RpD.jpeg" alt="6">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/SEu9pHo.jpeg" alt="7">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/vb0uajo.jpeg" alt="8">
+      </div>
+      <div class="grid-item ">
+        <img class="w100" src="./img/WAIXTXs.jpeg" alt="9">
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+  <script>
+
+    setTimeout(function () {
+      var $grid = $('.grid').masonry({
+        itemSelector: 'none',
+        columnWidth: 390,
+        stagger: 100,
+        gutter: 10,
+      });
+      $grid.addClass('is-visible-items');
+      $grid.masonry('option', {
+        itemSelector: '.grid-item'
+      });
+      
+      var $items = $grid.find('.grid-item');
+      console.log($items);
+      $grid.masonry('appended', $items);
+    }, 1000);
+
+  </script>
+</body>
+
+</html>
