@@ -1,0 +1,18 @@
+*{
+  outline:1px solid #000
+}    
+.counties {
+        fill:#33474e;
+    }
+    .counties :hover {
+        fill: #7f9ca7;
+        transition: 0.5s;
+    }
+    .county-borders {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 0.5px;
+    }
+    .rect{
+      background-color:#000
+    }
